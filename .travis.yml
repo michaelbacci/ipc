@@ -4,3 +4,9 @@ os:
   - osx
 go:
   - 1.11
+before_script:
+  - export GO111MODULE=on
+  - go get -u ./...
+script:
+  - go build
+  - go test
